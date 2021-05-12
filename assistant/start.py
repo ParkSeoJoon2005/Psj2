@@ -45,7 +45,7 @@ async def assistant(event):
             if udB.get("PMBOT") == "True":
                 ok = "You can contact my master using this bot!!\n\nSend your Message, I will Deliver it To Master."
             await event.reply(
-                f"Hey there [{get_display_name(u)}](tg://user?id={u.id}), this is Ultroid Assistant of [{ultroid_bot.me.first_name}](tg://user?id={ultroid_bot.uid})!\n\n{ok}",
+                f"Hey there [{get_display_name(u)}](tg://user?id={u.id}), this is UserBot Assistant of [{ultroid_bot.me.first_name}](tg://user?id={ultroid_bot.uid})!\n\n{ok}",
                 buttons=[Button.inline("Info.", data="ownerinfo")],
             )
         else:
@@ -53,13 +53,13 @@ async def assistant(event):
             mention = f"[{get_display_name(u)}](tg://user?id={u.id})"
             await event.reply(
                 Redis("STARTMSG").format(me=me, mention=mention),
-                buttons=[Button.inline("Info.", data="ownerinfo")],
+                buttons=[Button.inline("🚀 Info.", data="ownerinfo")],
             )
 
 
 @callback("ownerinfo")
 async def own(event):
-    await event.edit(Owner_info_msg, buttons=[Button.inline("Close", data="closeit")])
+    await event.edit(Owner_info_msg, buttons=[Button.inline("🔒 Close", data="closeit")])
 
 
 @callback("closeit")
