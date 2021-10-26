@@ -21,7 +21,7 @@
 ----
 
 
-(https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/parkseojoon2005/as.git)
+(https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/parkseojoon2005/psj2.git)
 
 # Deploy
 - [Heroku](#Deploy-to-Heroku)
